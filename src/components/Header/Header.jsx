@@ -1,10 +1,15 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
+import { useTranslation } from "react-i18next";
+// import { LANGUAGES } from "../constants/index";
 
 import './Header.scss';
 import { Logo } from '../Logo/Logo';
 
 const Header = () => {
+  const { t } = useTranslation();
+  // const { i18n, t } = useTranslation(); //TODO: need this one to toggle lang
+
   return (
     <header className="Header˝">
       <div className="Header__content">
@@ -24,7 +29,7 @@ const Header = () => {
 
 
             <h1 className='Header__title'>
-              Creating Visual Solutions that Inspire the World
+              {t("title")}
             </h1>
 
             {/* <LanguageSwitch /> */}
