@@ -1,0 +1,15 @@
+@import './styles/_utils.scss';
+@import './font.scss';
+
+.App {
+  font-family: 'NeueMontreal', sans-serif;
+  font-weight: 400;
+  background-color: $color-gray-dark;
+  color: $color-white;
+  height: 100vh; //TODO: delete
+}
+
+h1, h2 {
+  font-weight: 500;
+}
+
