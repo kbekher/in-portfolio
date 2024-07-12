@@ -1,27 +1,6 @@
 @import './_mixins.scss';
 
-%button-primary {
-
-
-  // &:hover {
-  
-  // }
-
-  // &:active {
-  
-  // }
-
-  // &:disabled {
-
-  // }
-
-}
-
-
-%heading-h1 {
-
-}
-
-%heading-h2 {
-
+%headline-h1 {
+  font-size: 40px;
+  font-weight: 400;
 }

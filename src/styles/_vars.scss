@@ -1,8 +1,51 @@
 $color-black: #00000f;
 $color-white: #ffffff;
 $color-gray-dark: #252525;
-// $color-gray-beige: #f0eae7;
-// $color-gray-light: #f1f1f1;
-// $color-secondary: #399837;
-// $color-secondary-blue: #0177d2;
+$color-gray-medium: #525252;
+$color-gray-light: #aeaeae;
 
+
+// TODO: for background
+// background: linear-gradient(
+//     to bottom, 
+//     #B207BA 0%, #B207BA 100%, 
+//     #933CD4 100%, #933CD4 100%, 
+//     #4481C1 100%, #4481C1 100%, 
+//     #1BA2B1 100%, #1BA2B1 100%, 
+//     #0FB0B4 100%, #0FB0B4 100%,
+//     #F43640 100%, #F43640 100%,
+//     #A633AC 100%, #A633AC 100%
+//   );
+
+//TODO: for btn
+// .gradient-border {
+//   border: 10px solid; /* Adjust the border width as needed */
+//   border-image: linear-gradient(
+//     to bottom, 
+//     #B207BA, 
+//     #933CD4, 
+//     #4481C1, 
+//     #1BA2B1, 
+//     #0FB0B4,
+//     #F43640,
+//     #A633AC
+//   ) 1;
+// }
+
+//TODO: for text color
+// .gradient-text {
+//   background: linear-gradient(
+//     to bottom, 
+//     #B207BA, 
+//     #933CD4, 
+//     #4481C1, 
+//     #1BA2B1, 
+//     #0FB0B4,
+//     #F43640,
+//     #A633AC
+//   );
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text;
+//   color: transparent;
+// }

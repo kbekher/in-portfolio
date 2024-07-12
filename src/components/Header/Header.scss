@@ -1,0 +1,33 @@
+@import '../../styles/utils';
+
+.Header {
+
+  &__content,
+  &__visualContent,
+  &__textContent {
+    height: 100vh;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__textContent {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    &-inner {
+      height: 100%;
+      padding: 60px 20px 36px;
+
+      @include onDesktop {
+        padding: 84px 120px;
+      }
+    }
+  }
+
+  &__title {
+    @extend %headline-h1 ;
+  }
+}
