@@ -1,0 +1,12 @@
+@import '../../styles/utils';
+
+.Navigation {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+
+  &__btn {
+    display: block;
+    @extend %button-nav;
+  }
+}

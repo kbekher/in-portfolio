@@ -14,12 +14,18 @@
 
   &__textContent {
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
+    right: 0;
 
     &-inner {
       height: 100%;
+      box-sizing: border-box;
       padding: 60px 20px 36px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       @include onDesktop {
         padding: 84px 120px;
@@ -29,5 +35,21 @@
 
   &__title {
     @extend %headline-h1 ;
+  }
+
+  &__nav {
+    margin-bottom: 14px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__connect-btn {
+    @extend %button-nav;
+    height: max-content;
   }
 }

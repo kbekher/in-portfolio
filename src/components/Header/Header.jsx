@@ -1,10 +1,12 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
 import { useTranslation } from "react-i18next";
-// import { LANGUAGES } from "../constants/index";
+
 
 import './Header.scss';
 import { Logo } from '../Logo/Logo';
+import Navigation from '../Navigation/Navigation';
+import LanguageToggle from '../LanguageToggle/LanguageToggle';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -24,16 +26,25 @@ const Header = () => {
             <div className="Header__top">
               <Logo />
 
-              {/* <Navbar />  */}
+              <h1 className='Header__title'>{t("title")}</h1>
             </div>
 
 
-            <h1 className='Header__title'>
-              {t("title")}
-            </h1>
+            <div className="Header__controls">
+              <div className="Header__nav">
+                <Navigation /> 
+              </div>
 
-            {/* <LanguageSwitch /> */}
-            
+              <div className="Header__actions">
+                <button type="button" className="Header__connect-btn">
+                  {t("contact")}
+                </button>
+
+                <LanguageToggle />
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>

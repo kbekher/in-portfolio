@@ -11,7 +11,7 @@ i18n.use(initReactI18next).init({
     en: {
       translation: {
         title: 'Creating Visual Solutions that Inspire the World',
-        about: "About",
+        about: "About me",
         portfolio: "Portfolio",
         connect: "Connect",
         contact: "Say hello",

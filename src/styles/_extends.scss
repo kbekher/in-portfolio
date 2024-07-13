@@ -4,3 +4,16 @@
   font-size: 40px;
   font-weight: 400;
 }
+
+%button-nav {
+  color: $color-white;
+  background-color: $color-black-opacity;
+  border-radius: $border-radius-btn;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  padding: 14px 10px;
+  height: 46px;
+  cursor: pointer;
+}

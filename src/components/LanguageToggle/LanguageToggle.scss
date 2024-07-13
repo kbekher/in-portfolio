@@ -1,0 +1,58 @@
+@import '../../styles/utils';
+
+.switch-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: auto;
+
+  & .switch-outer {
+    @extend %button-nav;
+    width: 94px;
+    position: relative;
+
+    & input[type="checkbox"] {
+      opacity: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: absolute;
+    }
+
+    & .button-toggle {
+      position: absolute;
+      top: 0;
+      border-radius: $border-radius-btn;
+      opacity: $opacity;
+
+      width: 51px;
+      height: 46px;
+      background-color: $color-black-opacity;
+
+      -webkit-transition: left 0.3s ease-in;
+      -o-transition: left 0.3s ease-in;
+      transition: left 0.3s ease-in;
+
+      &--left {
+        left: 0;
+      }
+
+      &--right {
+        right: 0;
+      }
+    }
+
+    & .button-lang {
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &--en {
+        margin-right: 22px;
+      }
+    }
+  }
+}
