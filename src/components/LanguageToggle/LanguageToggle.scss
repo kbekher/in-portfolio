@@ -12,6 +12,7 @@
 
   & .switch-outer {
     @extend %button-nav;
+    padding: 0;
     width: 94px;
     position: relative;
 
@@ -47,11 +48,19 @@
     }
 
     & .button-lang {
+      height: 100%;
+      width: 50%;
       text-transform: uppercase;
       cursor: pointer;
 
+      position: relative;
+
       &--en {
-        margin-right: 22px;
+        left: 2px;
+      }
+
+      &--de {
+        right: 2px;
       }
     }
   }
