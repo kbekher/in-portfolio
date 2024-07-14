@@ -16,7 +16,18 @@
   padding: 14px 10px;
   width: 102px;
   height: 46px;
+  transition: all 200ms ease-in-out;
   cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: $color-black-opacity-hover;
+  }
+
+  &:disabled {
+    color: $color-gray-light;
+    background-color: $color-gray-medium;
+  }
 
   @include onDesktop {
     height: 60px;

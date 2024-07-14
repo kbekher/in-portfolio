@@ -17,6 +17,10 @@
     position: relative;
     width: 94px;
 
+    &:hover {
+      background-color: $color-black-opacity;
+    }
+
     @include onDesktop {
       width: 150px;
     }
