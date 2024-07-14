@@ -9,11 +9,9 @@
   -webkit-box-pack: center;
   justify-content: center;
   margin: auto;
-  border-radius: $border-radius-btn; //TODO:
 
   & .switch-outer {
     @extend %button-nav;
-    border-radius: $border-radius-btn; //TODO:
     padding: 0;
     position: relative;
     width: 94px;
