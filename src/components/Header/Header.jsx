@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import { useTranslation } from "react-i18next";
-
 
 import './Header.scss';
 import { Logo } from '../Logo/Logo';
@@ -10,10 +9,28 @@ import LanguageToggle from '../LanguageToggle/LanguageToggle';
 
 const Header = () => {
   const { t } = useTranslation();
-  // const { i18n, t } = useTranslation(); //TODO: need this one to toggle lang
+
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    // Set initial height
+    setViewportHeight(window.innerHeight);
+
+    // Update height on window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
-    <header className="Header˝">
+    <header className="Header"  style={{ height: `${viewportHeight}px`}} >
       <div className="Header__content">
 
         <div className="Header__visualContent">
