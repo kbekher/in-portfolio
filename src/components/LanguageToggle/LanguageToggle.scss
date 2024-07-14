@@ -35,7 +35,6 @@
       border-radius: $border-radius-btn;
       opacity: $opacity;
 
-      font-size: 14px;
       width: 51px;
       height: 46px;
 
@@ -63,8 +62,8 @@
       height: 100%;
       width: 50%;
       text-transform: uppercase;
+      font-size: 14px;
       cursor: pointer;
-
       position: relative;
 
       &--en {
