@@ -3,6 +3,10 @@
 %headline-h1 {
   font-size: 40px;
   font-weight: 400;
+
+  @include onDesktop {
+    font-size: 54px;
+  }
 }
 
 %button-nav {

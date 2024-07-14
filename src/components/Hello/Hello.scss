@@ -7,7 +7,6 @@
   width: 100%;
   height: 100%;
   z-index: 1000;
-
   overflow: hidden;  
 
   &.animate__fadeIn, 
@@ -23,7 +22,9 @@
     flex-direction: column;
 
     @include onDesktop {
-      padding: 84px 120px;
+      padding: 28px 120px;
+
+      position: relative;
     }
   }
 
@@ -53,12 +54,15 @@
   }
 
   &__textContent {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
     text-align: center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &__text {

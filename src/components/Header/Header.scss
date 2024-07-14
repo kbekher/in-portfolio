@@ -29,7 +29,7 @@
 
       @include onDesktop {
         flex-direction: row;
-        padding: 84px 120px;
+        padding: 28px 120px 64px;
       }
     }
   }
@@ -67,6 +67,10 @@
   &__title {
     @extend %headline-h1 ;
     max-width: 460px;
+
+    @include onDesktop {
+      max-width: 550px;
+    }
   }
 
   &__connect-btn {
