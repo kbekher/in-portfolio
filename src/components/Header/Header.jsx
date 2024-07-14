@@ -38,16 +38,14 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="Header"  style={{ height: `${viewportHeight}px`}} >
+    <header className="Header" style={{ height: `${viewportHeight}px` }} >
       <div className="Header__content">
 
         <div className="Header__visualContent">
           <Spline scene="https://prod.spline.design/liDjqaY-i3BfRC2o/scene.splinecode" />
         </div>
 
-        {/* <div className="Header__emailLayer"> */}
-          <Hello isLayerOpen={isLayerOpen} setIsLayerOpen={setIsLayerOpen} />
-        {/* </div> */}
+        <Hello isLayerOpen={isLayerOpen} setIsLayerOpen={setIsLayerOpen} />
 
         <div className="Header__textContent">
           <div className="Header__textContent-inner">
@@ -60,7 +58,7 @@ const Header = () => {
 
             <div className="Header__controls">
               <div className="Header__nav">
-                <Navigation /> 
+                <Navigation />
               </div>
 
               <div className="Header__actions">
@@ -71,7 +69,6 @@ const Header = () => {
                 <LanguageToggle />
               </div>
             </div>
-
 
           </div>
         </div>
