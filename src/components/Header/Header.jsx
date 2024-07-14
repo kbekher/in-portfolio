@@ -6,10 +6,18 @@ import './Header.scss';
 import { Logo } from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import LanguageToggle from '../LanguageToggle/LanguageToggle';
+import Hello from '../Hello/Hello';
 
 const Header = () => {
   const { t } = useTranslation();
 
+  const [isLayerOpen, setIsLayerOpen] = useState(false);
+
+  const toggleLayer = () => {
+    setIsLayerOpen(true);
+  }
+
+  // TODO: check if height is changed on scroll
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   useEffect(() => {
@@ -37,6 +45,10 @@ const Header = () => {
           <Spline scene="https://prod.spline.design/liDjqaY-i3BfRC2o/scene.splinecode" />
         </div>
 
+        {/* <div className="Header__emailLayer"> */}
+          <Hello isLayerOpen={isLayerOpen} setIsLayerOpen={setIsLayerOpen} />
+        {/* </div> */}
+
         <div className="Header__textContent">
           <div className="Header__textContent-inner">
 
@@ -46,14 +58,13 @@ const Header = () => {
               <h1 className='Header__title'>{t("title")}</h1>
             </div>
 
-
             <div className="Header__controls">
               <div className="Header__nav">
                 <Navigation /> 
               </div>
 
               <div className="Header__actions">
-                <button type="button" className="Header__connect-btn">
+                <button type="button" className="Header__connect-btn" onClick={toggleLayer}>
                   {t("contact")}
                 </button>
 

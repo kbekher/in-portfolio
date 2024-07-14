@@ -16,7 +16,7 @@
   padding: 14px 10px;
   width: 102px;
   height: 46px;
-  transition: all 200ms ease-in-out;
+  transition: $transition;
   cursor: pointer;
 
   &:hover,
