@@ -28,17 +28,10 @@
       justify-content: space-between;
 
       @include onDesktop {
+        flex-direction: row;
         padding: 84px 120px;
       }
     }
-  }
-
-  &__title {
-    @extend %headline-h1 ;
-  }
-
-  &__nav {
-    margin-bottom: 14px;
   }
 
   &__actions {
@@ -46,10 +39,45 @@
     justify-content: center;
     align-items: center;
     gap: 14px;
+
+    @include onDesktop {
+      height: 100%;
+    }
+  }
+
+  &__top,
+  &__actions {
+    @include onDesktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between
+    }
+  }
+
+  &__nav {
+    margin-bottom: 14px;
+
+    @include onDesktop {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__title {
+    @extend %headline-h1 ;
+    max-width: 460px;
   }
 
   &__connect-btn {
     @extend %button-nav;
-    height: max-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+
+    // height: max-content;
   }
+
+
 }

@@ -12,9 +12,14 @@
 
   & .switch-outer {
     @extend %button-nav;
+    
     padding: 0;
-    width: 94px;
     position: relative;
+    width: 94px;
+
+    @include onDesktop {
+      width: 150px;
+    }
 
     & input[type="checkbox"] {
       opacity: 0;
@@ -32,6 +37,7 @@
 
       width: 51px;
       height: 46px;
+
       background-color: $color-black-opacity;
 
       -webkit-transition: left 0.3s ease-in;
@@ -44,6 +50,11 @@
 
       &--right {
         right: 0;
+      }
+
+      @include onDesktop {
+        width: 80px;
+        height: 60px;
       }
     }
 
