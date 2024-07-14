@@ -3,6 +3,12 @@
 
 body {
   overflow-x: hidden;
+  padding-top: env(safe-area-inset-top); /* This ensures the content starts below the status bar */
+}
+
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .container {
