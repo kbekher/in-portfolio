@@ -3,9 +3,9 @@
 .ContactForm {
     margin-bottom: 120px;
 
-    &__form {
+    // &__form {
 
-    }
+    // }
 
   &__input {
     font-size: 18px;
@@ -33,7 +33,6 @@
 
   &__button {
     @extend %button-light;
-
   }
 
   &__message-container {

@@ -10,9 +10,9 @@
 }
 
 
-%button { // TODO: move common styles to button
+// %button { // TODO: move common styles to button
  
-}
+// }
 
 
 %button-nav {
@@ -62,6 +62,7 @@
   &:active {
     background-color: $color-white;
 
+    //TODO: make transition smooth
     & span {
       background: linear-gradient(90deg, 
       #F43640 0%, 
