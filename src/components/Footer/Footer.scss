@@ -1,0 +1,28 @@
+@import '../../styles/utils';
+
+.Footer {
+  height: 600px; //TODO:update this
+
+  &__content {
+    height: 500px; // TODO: delete this
+    position: relative; // TODO: maybe move it to Footer directly
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__logo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

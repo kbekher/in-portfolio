@@ -31,7 +31,12 @@ i18n.use(initReactI18next).init({
         aboutMeText2: "I started my career in graphic design, crafting attractive logos and corporate identities for various companies. Over time, I shifted my focus to UX/UI design, where I design interfaces that are not only easy to use but also visually appealing. I'm also passionate about illustration, which allows me to express my creativity and inspiration through visual art.",
         aboutMeText3: "My goal is to not just complete projects, but to inspire my clients and users alike with each design I create.",
         footerPrompt: "Stay informed, subscribe",
-        footerDetails: "Receive our latest updates and exclusive offers."
+        footerDetails: "Receive our latest updates and exclusive offers.",
+        footerButton: "Join",
+        footerPlaceholder: "Enter your email...",
+        footerSuccessToast: "Thanks for subscribing!",
+        footerErrorToast: "Something went wrong. Please try again."
+
       }
     },
     de: {
@@ -56,8 +61,12 @@ i18n.use(initReactI18next).init({
         aboutMeText1: "Hallo! Ich bin Ivan, ein UX/UI-Designer, Grafikdesigner und Illustrator mit umfangreicher Erfahrung in der Entwicklung einzigartiger und effektiver visueller Lösungen. Ich spezialisiere mich darauf, Marken und Produkte durch benutzerfreundliche Interfaces zu präsentieren, die intuitiv und ansprechend sind.",
         aboutMeText2: "Meine Karriere begann im Bereich Grafikdesign, wo ich attraktive Logos und Corporate Identities für verschiedene Unternehmen entworfen habe. Im Laufe der Zeit habe ich meinen Fokus auf UX/UI-Design verschoben, wo ich Interfaces gestalte, die nicht nur einfach zu bedienen, sondern auch visuell ansprechend sind. Außerdem liebe ich Illustration, durch die ich meine Kreativität und Inspiration ausdrücken kann.",
         aboutMeText3: "Mein Ziel ist es, nicht nur Projekte abzuschließen, sondern meine Kunden und Nutzer gleichermaßen mit jedem meiner Designs zu inspirieren.",
-        footerPrompt: " ",
-        footerDetails: "Erhalte meine neuesten Updates und exklusiven Angebote."
+        footerPrompt: "Bleib informiert, abonniere jetzt",
+        footerDetails: "Erhalte meine neuesten Updates und exklusiven Angebote.",
+        footerButton: "Join",
+        footerPlaceholder: "Gib deine E-Mail ein...",
+        footerSuccessToast: "Danke fürs Abonnieren! ",
+        footerErrorToast: "Hat nicht geklappt, versuch's nochmal!"
       }
     },
   },

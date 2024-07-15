@@ -1,0 +1,64 @@
+@import '../../styles/utils';
+
+.ContactForm {
+    margin-bottom: 120px;
+
+    &__form {
+
+    }
+
+  &__input {
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    border-radius: $border-radius-btn;
+    background-color: $color-white-opacity;
+    color: $color-gray-dark;
+    box-sizing: border-box;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 28px;
+    outline: none;
+
+    &::placeholder {
+      color: $color-gray-dark;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: $color-gray-dark;
+      transition: $transition;
+    }
+  }
+
+  &__button {
+    @extend %button-light;
+
+  }
+
+  &__message-container {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    height: 40px;
+  }
+
+  &__message {
+    text-align: center;
+  }
+}
+
+.Toastify {
+  &__toast {
+    min-height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: max-content;
+    border-radius: $border-radius-btn;
+    background-color: $color-white-opacity;
+  }
+
+  &__close-button {
+    display: none;
+  }
+}

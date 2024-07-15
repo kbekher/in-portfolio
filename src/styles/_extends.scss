@@ -9,6 +9,12 @@
   }
 }
 
+
+%button { // TODO: move common styles to button
+ 
+}
+
+
 %button-nav {
   color: $color-white;
   background-color: $color-black-opacity;
@@ -35,5 +41,46 @@
 
   @include onDesktop {
     width: 110px;
+  }
+}
+
+%button-light {
+  color: $color-white;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1px solid $color-white;
+  border-radius: $border-radius-btn;
+  background-color: transparent;
+  transition: $transition;
+  transition-duration: 500ms;
+
+  cursor: pointer;
+  height: 46px;
+  padding: 10px 40px;
+
+  &:hover,
+  &:active {
+    background-color: $color-white;
+
+    & span {
+      background: linear-gradient(90deg, 
+      #F43640 0%, 
+      #A633AC 25%, 
+      #B207BA 50%, 
+      #933CD4 74%, 
+      #4481C1 100%, 
+      #1BA2B1 100%, 
+      #0FB0B4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text; /* For non-webkit browsers */
+      color: transparent; /* Ensures the text color is not visible */
+    }
+  }
+
+  &:disabled {
+    border-color: $color-gray-medium;
+    color: $color-gray-light;
+    background-color: $color-gray-medium;
   }
 }

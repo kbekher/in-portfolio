@@ -1,11 +1,13 @@
 import './App.scss';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
       <Header />
 
+        
       {/*       
         <img height="600" src="https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/hero.png" />
         <img height="600" src="https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/about.png" /> */}
@@ -14,6 +16,8 @@ function App() {
         <source src="https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/xtrafit.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video> */}
+
+    <Footer />
 
     </div>
   );

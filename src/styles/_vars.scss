@@ -2,6 +2,7 @@ $color-black: #000000;
 $color-black-opacity: rgba(0, 0, 0, 0.3);
 $color-black-opacity-hover: rgba(0, 0, 0, 0.4);
 $color-white: #ffffff;
+$color-white-opacity: rgba(255, 255, 255, 0.2);
 $color-gray-dark: #252525;
 $color-gray-medium: #525252;
 $color-gray-light: #aeaeae;
@@ -10,3 +11,13 @@ $color-gray-light: #aeaeae;
 $border-radius-btn: 53px;
 $opacity: 30%;
 $transition: all 200ms ease-in-out;
+
+$text-gradient: linear-gradient(90deg,
+    #F43640 0%,
+    #A633AC 25%,
+    #B207BA 50%,
+    #933CD4 74%,
+    #4481C1 100%,
+    #1BA2B1 100%,
+    #0FB0B4 100%
+);

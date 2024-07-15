@@ -73,6 +73,10 @@
     }
   }
 
+  &__logo {
+    margin-bottom: 10px;
+  }
+
   &__connect-btn {
     @extend %button-nav;
 

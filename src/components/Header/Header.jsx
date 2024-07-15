@@ -51,8 +51,10 @@ const Header = () => {
           <div className="Header__textContent-inner">
 
             <div className="Header__top">
-              <Logo />
-
+              <div className="Header__logo">
+                <Logo /> 
+              </div>
+             
               <h1 className='Header__title'>{t("title")}</h1>
             </div>
 
