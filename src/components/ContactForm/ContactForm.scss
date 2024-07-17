@@ -1,15 +1,22 @@
 @import '../../styles/utils';
 
 .ContactForm {
-    margin-bottom: 120px;
 
-    // &__form {
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    // }
+      @include onDesktop {
+        flex-direction: row;
+      }
+    }
 
   &__input {
     font-size: 18px;
+    max-width: 350px;
     width: 100%;
+    height: 46px;
     border: none;
     border-radius: $border-radius-btn;
     background-color: $color-white-opacity;
@@ -29,22 +36,18 @@
       -webkit-text-fill-color: $color-gray-dark;
       transition: $transition;
     }
+
+    @include onDesktop {
+      margin-bottom: 0;
+      margin-right: 20px;
+      width: 406px;
+    }
   }
 
   &__button {
     @extend %button-light;
   }
 
-  &__message-container {
-    margin-top: 10px;
-    display: block;
-    width: 100%;
-    height: 40px;
-  }
-
-  &__message {
-    text-align: center;
-  }
 }
 
 .Toastify {

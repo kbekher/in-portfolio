@@ -52,8 +52,7 @@
   border-radius: $border-radius-btn;
   background-color: transparent;
   transition: $transition;
-  transition-duration: 500ms;
-
+  box-sizing: border-box;
   cursor: pointer;
   height: 46px;
   padding: 10px 40px;

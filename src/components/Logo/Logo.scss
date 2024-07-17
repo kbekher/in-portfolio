@@ -2,13 +2,6 @@
 
 .Logo {
   display: block;
-  width: 46px;
-  height: 60px;
-
-  @include onDesktop {
-    width: 34px;
-    height: 48px;
-  }
 
   &__image {
     width: 100%;

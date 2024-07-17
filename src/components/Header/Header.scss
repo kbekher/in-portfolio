@@ -29,7 +29,9 @@
 
       @include onDesktop {
         flex-direction: row;
-        padding: 28px 120px 64px;
+        padding: 28px 0 64px;
+        margin: 0 auto;
+        max-width: 1400px;
       }
     }
   }
@@ -73,8 +75,15 @@
     }
   }
 
-  &__logo {
+  & .Logo {
     margin-bottom: 10px;
+    width: 46px;
+    height: 60px;
+  
+    @include onDesktop {
+      width: 34px;
+      height: 48px;
+    }
   }
 
   &__connect-btn {

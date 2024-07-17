@@ -2,9 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Logo } from '../Logo/Logo';
+import { ContactForm } from '../ContactForm';
+import { ContactLinks } from '../ContactLinks';
 
 import './Footer.scss';
-import { ContactForm } from '../ContactForm';
+
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -18,17 +20,15 @@ const Footer = () => {
             <h3 className='Footer__title'>{t("footerPrompt")}</h3>
             <p className='Footer__subtitle'>{t("footerDetails")}</p>
 
-            <div className="Footer__logo">
-              <Logo />
-            </div>
+            <Logo />
           </div>
 
           <div className="col">
             <ContactForm />
 
-            {/* <ContactLinks /> */}
+            <ContactLinks />
           </div>
-          
+
 
 
         </div>
