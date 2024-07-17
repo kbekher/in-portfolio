@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import './ContactForm.scss';
@@ -48,6 +48,7 @@ export const ContactForm = () => {
     }
   };
 
+
   return (
     <div className="ContactForm">
       <form
@@ -75,14 +76,12 @@ export const ContactForm = () => {
 
       <ToastContainer
         position="bottom-center"
-        autoClose={200}
+        autoClose={2000}
         hideProgressBar={true}
         rtl={false}
         theme="dark"
-        transition="Bounce"
+        transition={Bounce}
       />
-
-
     </div>
   );
 };
