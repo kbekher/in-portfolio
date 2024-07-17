@@ -75,7 +75,7 @@ export const ContactForm = () => {
 
       <ToastContainer
         position="bottom-center"
-        autoClose={2000}
+        autoClose={200}
         hideProgressBar={true}
         rtl={false}
         theme="dark"
