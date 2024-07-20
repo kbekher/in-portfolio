@@ -1,10 +1,13 @@
 @import './styles/_utils.scss';
 @import './font.scss';
 
+html {
+  background-color: $color-gray-dark;
+}
+
 body {
   overflow-x: hidden;
   padding-top: env(safe-area-inset-top); /* This ensures the content starts below the status bar */
-  background-color: $color-gray-dark;
 }
 
 img {

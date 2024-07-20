@@ -69,6 +69,7 @@
   @extend %button;
 
   font-size: 20px;
+  line-height: 20px;
   border: 1px solid $color-white;
   background-color: transparent;
   height: 46px;
@@ -104,11 +105,14 @@
   @include onDesktop {
     height: 33px;
     font-size: 14px;
+    line-height: 14px;
     padding: 8px 30px;
   }
+
   @include onLargeScreen {
     height: 46px;
     font-size: 20px;
+    line-height: 20px;
     padding: 10px 37px;
   }
 }
