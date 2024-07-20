@@ -1,26 +1,38 @@
 @import '../../styles/utils';
 
 .ContactLinks {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
-  max-width: 400px;
+  max-width: 330px;
 
   @include onDesktop {
     max-width: max-content
   }
 
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    @include onDesktop {
+      gap: 14px;
+    }
+
+    @include onLargeScreen {
+      gap: 24px;
+    }
+  }
+
   &__link {
     @include square(38px);
-    font-size: 18px;
+    color: $color-gray-dark;
+    font-size: 20px;
     border-radius: 50%;
     background-color: $color-gray-medium;
     transition: $transition;
 
     &:hover,
     &:active {
-      color: $color-gray-dark;
       background-color: $color-white;
     }
 
@@ -41,9 +53,13 @@
     }
 
     @include onDesktop {
-      @include square(56px);
-      font-size: 30px;
-      gap: 24px;
+      @include square(42px);
+      font-size: 23px;
+    }
+
+    @include onLargeScreen {
+      @include square(66px);
+      font-size: 36px;
     }
   }
 }

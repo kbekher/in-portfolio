@@ -20,6 +20,10 @@ img {
   @include onDesktop {
     padding: 0 80px;
   }
+
+  @include onDesktop {
+    padding: 0 120px;
+  }
 }
 
 .App {

@@ -13,11 +13,16 @@
   }
 }
 
+%img-size {
+  object-fit: contain;
+  object-position: center;
+}
 
 %button {
   // TODO: move common styles to button
   color: $color-white;
   border-radius: $border-radius-btn;
+  box-sizing: border-box;
   text-transform: uppercase;
   transition: $transition;
   cursor: pointer;
@@ -37,7 +42,6 @@
   font-size: 14px;
   text-align: center;
 
-  box-sizing: border-box;
   padding: 14px 10px;
   width: 102px;
   height: 46px; //TODO: should move to button? 
@@ -67,9 +71,8 @@
   font-size: 20px;
   border: 1px solid $color-white;
   background-color: transparent;
-
   height: 46px;
-  padding: 10px 40px;
+  padding: 11px 37px;
 
   &:hover,
   &:active {
@@ -98,13 +101,15 @@
     border-color: $color-gray-medium;
   }
 
-  // @include onDesktop {
-  //   height: 39px;
-  // }
+  @include onDesktop {
+    height: 33px;
+    font-size: 14px;
+    padding: 8px 30px;
+  }
+  @include onLargeScreen {
+    height: 46px;
+    font-size: 20px;
+    padding: 10px 37px;
+  }
 }
 
-
-%img-size {
-  object-fit: contain;
-  object-position: center;
-}
