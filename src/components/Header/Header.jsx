@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import { useTranslation } from "react-i18next";
 
@@ -16,6 +16,12 @@ const Header = () => {
   const toggleLayer = () => {
     setIsLayerOpen(true);
   }
+
+  const [vh, setVh] = useState(window.innerHeight * 0.01);
+
+  useEffect(() => {
+    setVh(window.innerHeight * 0.01);
+  }, []);
 
   // TODO: check if height is changed on scroll
   // const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
@@ -39,7 +45,7 @@ const Header = () => {
 
   return (
     // <header className="Header" style={{ height: `${viewportHeight}px` }} >
-    <header className="Header">
+    <header className="Header" style={{ height: `calc(${vh}px * 100)`}}>
 
       <div className="Header__visualContent">
         <Spline scene="https://prod.spline.design/liDjqaY-i3BfRC2o/scene.splinecode" />
