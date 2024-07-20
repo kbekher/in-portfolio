@@ -10,6 +10,12 @@
   }
 }
 
+@mixin onLargeScreen {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
 @mixin grid {
   display: grid;
   column-gap: 24px;

@@ -4,6 +4,7 @@
 body {
   overflow-x: hidden;
   padding-top: env(safe-area-inset-top); /* This ensures the content starts below the status bar */
+  background-color: $color-gray-dark;
 }
 
 img {
@@ -12,13 +13,17 @@ img {
 
 .container {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1680px;
   padding: 0 20px;
+  height: 100%;
+
+  @include onDesktop {
+    padding: 0 80px;
+  }
 }
 
 .App {
   font-family: 'NeueMontreal', sans-serif;
   font-weight: 400;
-  background-color: $color-gray-dark;
   color: $color-white;
 }

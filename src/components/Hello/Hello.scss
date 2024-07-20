@@ -15,15 +15,16 @@
   } 
 
   &__content {
-    height: 100%;
-    box-sizing: border-box;
-    padding: 64px 20px;
+    // height: 100%;
+    // box-sizing: border-box;
+    // padding: 64px 20px;
+    padding-top: 64px;
     display: flex;
     flex-direction: column;
 
     @include onDesktop {
-      padding: 28px 120px;
-
+      // padding: 28px 120px;
+      padding-top: 48px;
       position: relative;
     }
   }
@@ -70,7 +71,7 @@
     line-height: 34px;
     margin-bottom: 10px;
 
-    @include onDesktop {
+    @include onLargeScreen {
       font-size: 32px;
     }
   }
@@ -92,7 +93,7 @@
     }
 
     @include onDesktop {
-      font-size: 96px;
+      font-size: 80px;
       text-decoration: none;
 
       &::after {
@@ -102,6 +103,10 @@
       &:hover::after {
         width: 100%;
       }
+    }
+
+    @include onLargeScreen {
+      font-size: 96px;
     }
   }
 
