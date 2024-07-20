@@ -3,6 +3,8 @@ export const LANGUAGES = [
   { code: "de" },
 ];
 
+export const NAV_LINKS = ["about", "portfolio", "connect"];
+
 export const MEDIA_LINKS = [
   {
     name: 'google',

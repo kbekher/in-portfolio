@@ -24,6 +24,10 @@
       width: 104px;
     }
 
+    @include onLargeScreen {
+      width: 150px;
+    }
+
     & input[type="checkbox"] {
       opacity: 0;
       -webkit-appearance: none;
@@ -59,6 +63,11 @@
         width: 57px;
         height: 39px;
       }
+
+      @include onLargeScreen {
+        width: 81px;
+        height: 61px;
+      }
     }
 
     & .button-lang {
@@ -76,6 +85,10 @@
 
       &--de {
         right: 2px;
+      }
+
+      @include onLargeScreen{
+        font-size: 20px;
       }
     }
   }

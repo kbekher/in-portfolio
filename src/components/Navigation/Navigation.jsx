@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { NAV_LINKS } from '../../constants';
 
 import './Navigation.scss';
 
@@ -8,17 +9,11 @@ const Navigation = () => {
 
   return (
     <ul className='Navigation'>
-      <li className='Navigation__item'>
-        <a href="#about" className="Navigation__btn">{t("about")}</a>
-      </li>
-
-      <li className='Navigation__item'>
-        <a href="#portfolio" className="Navigation__btn">{t("portfolio")}</a>
-      </li>
-
-      <li className='Navigation__item'>
-        <a href="#connect" className="Navigation__btn">{t("connect")}</a>
-      </li>
+      { NAV_LINKS.map(link => (
+              <li className='Navigation__item' key={link}>
+              <a href={`#${link}`} className="Navigation__btn">{t(link)}</a>
+            </li>
+      ))}
     </ul>
   );
 }

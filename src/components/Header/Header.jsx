@@ -41,41 +41,39 @@ const Header = () => {
     // <header className="Header" style={{ height: `${viewportHeight}px` }} >
     <header className="Header">
 
-        <div className="Header__visualContent">
-          <Spline scene="https://prod.spline.design/liDjqaY-i3BfRC2o/scene.splinecode" />
+      <div className="Header__visualContent">
+        <Spline scene="https://prod.spline.design/liDjqaY-i3BfRC2o/scene.splinecode" />
+      </div>
 
-        </div>
+      <Hello isLayerOpen={isLayerOpen} setIsLayerOpen={setIsLayerOpen} />
 
-        <Hello isLayerOpen={isLayerOpen} setIsLayerOpen={setIsLayerOpen} />
+      <div className="Header__textContent">
+        <div className="container">
+          <div className="Header__textContent-inner">
 
-        <div className="Header__textContent">
-          <div className="container">
-            <div className="Header__textContent-inner">
-
-              <div className="Header__top">
-                <Logo />
-
-                <h1 className='Header__title'>{t("title")}</h1>
-              </div>
-
-              <div className="Header__controls">
-                <div className="Header__nav">
-                  <Navigation />
-                </div>
-
-                <div className="Header__actions">
-                  <button type="button" className="Header__connect-btn" onClick={toggleLayer}>
-                    {t("contact")}
-                  </button>
-
-                  <LanguageToggle />
-                </div>
-              </div>
-
+            <div className="Header__top">
+              <Logo />
+              <h1 className='Header__title'>{t("title")}</h1>
             </div>
-          </div>
 
+            <div className="Header__controls">
+              <div className="Header__nav">
+                <Navigation />
+              </div>
+
+              <div className="Header__actions">
+                <button type="button" className="Header__connect-btn" onClick={toggleLayer}>
+                  {t("contact")}
+                </button>
+
+                <LanguageToggle />
+              </div>
+            </div>
+
+          </div>
         </div>
+      </div>
+
     </header>
   );
 }

@@ -9,7 +9,7 @@
   }
 
   @include onLargeScreen {
-    font-size: 54px;
+    font-size: 70px;
   }
 }
 
@@ -48,9 +48,16 @@
   }
 
   @include onDesktop {
-    width: 100%;
+    width: 110px;
     padding: 11px 13px;
     height: 39px;
+  }
+
+  @include onLargeScreen {
+    font-size: 20px;
+    height: 61px;
+    padding: 19px 14px;
+    width: 149px;
   }
 }
 
