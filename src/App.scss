@@ -3,11 +3,15 @@
 
 html {
   background-color: $color-gray-dark;
+  height: -webkit-fill-available;
 }
 
 body {
   overflow-x: hidden;
   padding-top: env(safe-area-inset-top); /* This ensures the content starts below the status bar */
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 }
 
 img {

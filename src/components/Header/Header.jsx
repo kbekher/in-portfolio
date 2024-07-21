@@ -15,53 +15,18 @@ const Header = () => {
 
   const [isLayerOpen, setIsLayerOpen] = useState(false);
 
-  const toggleLayer = () => {
-    setIsLayerOpen(true);
-  }
+  const toggleLayer = () => { setIsLayerOpen(true); }
 
   const screenSize = useScreenSize();
   const isMobile = screenSize.width <= 768;
 
-  const splineSrc = isMobile 
-    ? 'https://prod.spline.design/z8TxyhHvqedYy4lw/scene.splinecode' 
-    : 'https://prod.spline.design/liDjqaY-i3BfRC2o/scene.splinecode';
-
-  // const [vh, setVh] = useState(window.innerHeight * 0.01);
-
-  // useEffect(() => {
-  //   setVh(window.innerHeight * 0.01);
-  // }, []);
-
-  // TODO: check if height is changed on scroll
-  // const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setViewportHeight(window.innerHeight);
-  //   };
-
-  //   // Set initial height
-  //   setViewportHeight(window.innerHeight);
-
-  //   // Update height on window resize
-  //   window.addEventListener('resize', handleResize);
-
-  //   // Cleanup listener on component unmount
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
+  const splineCode = isMobile ? 'z8TxyhHvqedYy4lw' : 'liDjqaY-i3BfRC2o';
 
   return (
-    // <header className="Header" style={{ height: `${viewportHeight}px` }} >
-    // <header className="Header" style={{ height: `calc(${vh}px * 100)`}}>
-    <header className="Header" style={{ height: isMobile ? screenSize.height : '100vh'}}>
-    {/* <header className="Header"> */}
-
+    <header className="Header">
+      
       <div className="Header__visualContent">
-        {/* <Spline scene={splineSrc} width="100%" height={isMobile ? screenSize.height : '100vh'} /> */}
-        <Spline scene={splineSrc} />
-
+        <Spline scene={`https://prod.spline.design/${splineCode}/scene.splinecode`} />
       </div>
 
       <Hello isLayerOpen={isLayerOpen} setIsLayerOpen={setIsLayerOpen} />

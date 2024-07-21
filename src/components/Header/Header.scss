@@ -2,6 +2,8 @@
 
 .Header {
   height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   position: relative;
 
   &__visualContent,
@@ -96,6 +98,21 @@
 
     @include onDesktop {
       margin-top: 8px;
+    }
+  }
+
+  &__controls {
+    position: fixed;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    @include onDesktop {
+      display: block;
+      position: static;
+      transform: none;
+      width: max-content;
     }
   }
 }
