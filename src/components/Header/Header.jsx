@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import { useTranslation } from "react-i18next";
 
-import './Header.scss';
 import { Logo } from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import LanguageToggle from '../LanguageToggle/LanguageToggle';
 import Hello from '../Hello/Hello';
+
+import './Header.scss';
+import useScreenSize from '../../hooks/useScreenSize';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -17,11 +19,18 @@ const Header = () => {
     setIsLayerOpen(true);
   }
 
-  const [vh, setVh] = useState(window.innerHeight * 0.01);
+  const screenSize = useScreenSize();
+  const isMobile = screenSize.width <= 768;
 
-  useEffect(() => {
-    setVh(window.innerHeight * 0.01);
-  }, []);
+  const splineSrc = isMobile 
+    ? 'https://prod.spline.design/z8TxyhHvqedYy4lw/scene.splinecode' 
+    : 'https://prod.spline.design/liDjqaY-i3BfRC2o/scene.splinecode';
+
+  // const [vh, setVh] = useState(window.innerHeight * 0.01);
+
+  // useEffect(() => {
+  //   setVh(window.innerHeight * 0.01);
+  // }, []);
 
   // TODO: check if height is changed on scroll
   // const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
@@ -45,10 +54,14 @@ const Header = () => {
 
   return (
     // <header className="Header" style={{ height: `${viewportHeight}px` }} >
-    <header className="Header" style={{ height: `calc(${vh}px * 100)`}}>
+    // <header className="Header" style={{ height: `calc(${vh}px * 100)`}}>
+    <header className="Header" style={{ height: isMobile ? screenSize.height : '100vh'}}>
+    {/* <header className="Header"> */}
 
       <div className="Header__visualContent">
-        <Spline scene="https://prod.spline.design/liDjqaY-i3BfRC2o/scene.splinecode" />
+        {/* <Spline scene={splineSrc} width="100%" height={isMobile ? screenSize.height : '100vh'} /> */}
+        <Spline scene={splineSrc} />
+
       </div>
 
       <Hello isLayerOpen={isLayerOpen} setIsLayerOpen={setIsLayerOpen} />

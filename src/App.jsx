@@ -7,6 +7,21 @@ function App() {
     <div className="App">
       <Header />
 
+      <main>
+        {/* <HeroSection type="hero" hasContactButtons={true} /> */} 
+{/* 
+        <Project 
+          title=""
+          description=""
+          type=""
+          mediaSrc=""
+          behanceUrl=""
+          siteUrl=""
+        /> */}
+
+        {/* <HeroSection type="about" hasContactButtons={true} /> */}
+      </main>
+
         
       {/*       
         <img height="600" src="https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/hero.png" />
