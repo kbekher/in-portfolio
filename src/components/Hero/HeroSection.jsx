@@ -3,11 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { ContactLinks } from '../ContactLinks';
 
 import './HeroSection.scss';
-import useIsMobile from '../../hooks/useIsMobile';
+// import useIsMobile from '../../hooks/useIsMobile';
+import useScreenSize from '../../hooks/useScreenSize';
 
 const HeroSection = ({ type }) => {
   const { t } = useTranslation();
-  const isMobile = useIsMobile();
+
+  const screenSize = useScreenSize();
+  // const isMobile = useIsMobile();
 
   return (
     <div className="HeroSection">
@@ -41,7 +44,7 @@ const HeroSection = ({ type }) => {
             <img
               src={`https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/${type}.png`}
               alt="Ivan Inozemtsev"
-              height={isMobile ? 424 : 900}
+              height={screenSize.height < 760 ? (screenSize.height * 0.4) : (screenSize.height * 0.5)}
               className="HeroSection__image"
             />
           </div>

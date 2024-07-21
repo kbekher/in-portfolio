@@ -40,7 +40,7 @@
 @mixin addGradient ($delay) {
   @extend %gradient-text;
 
-  animation: gradient-animation 5s ease-in-out infinite;
+  animation: gradient-animation 12s ease-in-out infinite;
   animation-delay: $delay;
   background-size: 400% 100%;
 }

@@ -3,6 +3,12 @@
 %headline {
   font-weight: 400;
   line-height: auto;
+}
+
+%headline-h1 {
+  @extend %headline;
+
+  font-size: 40px;
 
   @include onDesktop {
     font-size: 48px;
@@ -13,16 +19,20 @@
   }
 }
 
-%headline-h1 {
-  font-size: 40px;
-  @extend %headline;
-}
-
 %headline-h2 {
+  @extend %headline;
+
   font-size: 36px;
   text-align: center;
   margin-bottom: 16px;
-  @extend %headline;
+
+  @include onDesktop {
+    font-size: 48px;
+  }
+
+  @include onLargeScreen {
+    font-size: 70px;
+  }
 }
 
 %p {
@@ -72,15 +82,19 @@
     0% {
       background-position: 0% 50%;
     }
-
+    25% {
+      background-position: 50% 50%;
+    }
     50% {
       background-position: 100% 50%;
     }
-
+    75% {
+      background-position: 50% 50%;
+    }
     100% {
       background-position: 0% 50%;
     }
-  }
+  }  
 }
 
 %button {
