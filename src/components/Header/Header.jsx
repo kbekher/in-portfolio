@@ -8,17 +8,16 @@ import LanguageToggle from '../LanguageToggle/LanguageToggle';
 import Hello from '../Hello/Hello';
 
 import './Header.scss';
-import useScreenSize from '../../hooks/useScreenSize';
+import useIsMobile from '../../hooks/useIsMobile';
 
 const Header = () => {
   const { t } = useTranslation();
 
   const [isLayerOpen, setIsLayerOpen] = useState(false);
-
+  
   const toggleLayer = () => { setIsLayerOpen(true); }
 
-  const screenSize = useScreenSize();
-  const isMobile = screenSize.width <= 768;
+  const isMobile = useIsMobile();
 
   const splineCode = isMobile ? 'z8TxyhHvqedYy4lw' : 'liDjqaY-i3BfRC2o';
 

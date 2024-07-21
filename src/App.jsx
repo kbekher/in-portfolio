@@ -1,6 +1,7 @@
 import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import HeroSection from './components/Hero/HeroSection';
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <Header />
 
       <main>
-        {/* <HeroSection type="hero" hasContactButtons={true} /> */} 
+
+        <HeroSection type="hero" /> 
 {/* 
         <Project 
           title=""
@@ -19,13 +21,14 @@ function App() {
           siteUrl=""
         /> */}
 
-        {/* <HeroSection type="about" hasContactButtons={true} /> */}
+      <HeroSection type="biography" />
+
       </main>
 
         
       {/*       
         <img height="600" src="https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/hero.png" />
-        <img height="600" src="https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/about.png" /> */}
+        <img height="600" src="https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/biography.png" /> */}
 
       {/* <video height="800" controls autoplay loop>
         <source src="https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/xtrafit.mp4" type="video/mp4" />

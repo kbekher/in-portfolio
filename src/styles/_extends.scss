@@ -1,8 +1,8 @@
 @import './_mixins.scss';
 
-%headline-h1 {
-  font-size: 40px;
+%headline {
   font-weight: 400;
+  line-height: auto;
 
   @include onDesktop {
     font-size: 48px;
@@ -13,9 +13,74 @@
   }
 }
 
+%headline-h1 {
+  font-size: 40px;
+  @extend %headline;
+}
+
+%headline-h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 16px;
+  @extend %headline;
+}
+
+%p {
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 300;
+  text-align: center;
+
+  @include onDesktop {
+    font-size: 16px;
+    line-height: auto;
+  }
+
+  @include onLargeScreen {
+    font-size: 22px;
+  }
+}
+
+%component-height {
+  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
 %img-size {
   object-fit: contain;
   object-position: center;
+}
+
+%gradient-text {
+  background: linear-gradient(90deg,
+      #F43640 0%,
+      #A633AC 25%,
+      #B207BA 50%,
+      #933CD4 74%,
+      #4481C1 100%,
+      #1BA2B1 100%,
+      #0FB0B4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* For non-webkit browsers */
+  color: transparent;
+  /* Ensures the text color is not visible */
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
 
 %button {
@@ -81,20 +146,7 @@
 
     //TODO: make transition smooth
     & span {
-      background: linear-gradient(90deg,
-          #F43640 0%,
-          #A633AC 25%,
-          #B207BA 50%,
-          #933CD4 74%,
-          #4481C1 100%,
-          #1BA2B1 100%,
-          #0FB0B4 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      /* For non-webkit browsers */
-      color: transparent;
-      /* Ensures the text color is not visible */
+      @extend %gradient-text;
     }
   }
 
@@ -116,4 +168,3 @@
     padding: 10px 37px;
   }
 }
-
