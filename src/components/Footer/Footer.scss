@@ -9,13 +9,13 @@
 
   &__content {
     text-align: center;
-    padding: 170px 0 80px;
+    padding: 170px 0 280px;
     position: relative;
 
     @include onDesktop {
       position: relative;
       text-align: start;
-      padding-top: 64px;
+      padding: 64px 0 80px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -64,7 +64,7 @@
     width: 34px;
     height: 38px;
     position: absolute;
-    bottom: 30px;
+    bottom: 230px;
     left: 50%;
     transform: translateX(-50%);
 

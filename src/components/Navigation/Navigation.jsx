@@ -9,10 +9,10 @@ const Navigation = () => {
 
   return (
     <ul className='Navigation'>
-      { NAV_LINKS.map(link => (
-              <li className='Navigation__item' key={link}>
-              <a href={`#${link}`} className="Navigation__btn">{t(link)}</a>
-            </li>
+      {NAV_LINKS.map(link => (
+        <li className='Navigation__item' key={link}>
+          <a href={`#${link}`} className="Navigation__btn">{t(link)}</a>
+        </li>
       ))}
     </ul>
   );
