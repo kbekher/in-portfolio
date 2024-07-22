@@ -4,6 +4,22 @@
   @extend %component-height;
   position: relative;
 
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  &--hero {
+    background-image: url(https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/hero.png);
+
+  }
+
+  &--biography {
+    background-image: url(https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/biography.png);
+  }
+
   &__content {
     padding-top: 120px;
     display: flex;
