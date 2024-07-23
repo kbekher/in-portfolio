@@ -3,6 +3,9 @@ export const LANGUAGES = [
   { code: "de" },
 ];
 
+// export const SECTIONS = ["header", "hero", "aceandtate", "xtrafit", "flowtech", "illustration", "bio", "footer"];
+export const SECTIONS = ["header", "hero", "bio", "footer"];
+
 export const NAV_LINKS = ["about", "portfolio", "connect"];
 
 export const MEDIA_LINKS = [
@@ -27,7 +30,7 @@ export const MEDIA_LINKS = [
     href: 'https://www.threads.net/@inozemtsevco'
   },
   {
-    name: 'dribbble', //TODO: in Figma <i class="fa-solid fa-basketball"></i>
+    name: 'dribbble',
     href: 'https://dribbble.com/Bluntcath23'
   },
 ];

@@ -8,7 +8,14 @@ const HeroSection = ({ type }) => {
   const { t } = useTranslation();
 
   return (
-    <div className={`HeroSection HeroSection--${type}`}>
+    <div className="HeroSection">
+      <div className="HeroSection__img-wrapper">
+        <img 
+          src={`https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/${type}.png`} 
+          alt="Ivan Inozemtsev"
+          className="HeroSection__img"
+        />
+      </div>
       <div className="container">
         <div className="HeroSection__content">
 
