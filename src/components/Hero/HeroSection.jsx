@@ -9,38 +9,43 @@ const HeroSection = ({ type }) => {
 
   return (
     <div className="HeroSection">
-      <div className="HeroSection__img-wrapper">
-        <img 
-          src={`https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/${type}.png`} 
-          alt="Ivan Inozemtsev"
-          className="HeroSection__img"
-        />
-      </div>
-      <div className="container">
-        <div className="HeroSection__content">
+      <div className="HeroSection__content">
 
-          <h2 className="HeroSection__title">
+        <div className="HeroSection__textContent">
+          <div className="container">
+
+            <h2 className="HeroSection__title">
+              {type === 'hero' ? (
+                <>
+                  {t(`${type}TitlePart1`)} <span>Design</span> {t(`${type}TitlePart2`)} <span>Illustration</span>
+                </>
+              ) : t(`${type}Title`)
+              }
+            </h2>
+
             {type === 'hero' ? (
               <>
-                {t(`${type}TitlePart1`)} <span>Design</span> {t(`${type}TitlePart2`)} <span>Illustration</span>
+                <p className="HeroSection__text">{t(`${type}Text`)}</p>
+
+                <ContactLinks />
               </>
-            ) : t(`${type}Title`)
-            }
-          </h2>
+            ) : (
+              [1, 2, 3].map(index => (
+                <p className="HeroSection__text" key={index}>
+                  {t(`${type}Text${index}`)}
+                </p>
+              ))
+            )}
+          </div>
 
-          {type === 'hero' ? (
-            <>
-              <p className="HeroSection__text">{t(`${type}Text`)}</p>
+        </div>
 
-              <ContactLinks />
-            </>
-          ) : (
-            [1, 2, 3].map(index => (
-              <p className="HeroSection__text" key={index}>
-                {t(`${type}Text${index}`)}
-              </p>
-            ))
-          )}
+        <div className="HeroSection__img-wrapper">
+          <img
+            src={`https://inozemtsev-portfolio.s3.eu-central-1.amazonaws.com/${type}.png`}
+            alt="Ivan Inozemtsev"
+            className="HeroSection__img"
+          />
         </div>
       </div>
     </div>
