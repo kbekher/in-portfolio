@@ -10,7 +10,7 @@
   top: 0;
 
   animation: sticky-parallax-header-move-and-size linear forwards;
-  animation-timeline: scroll();
+  animation-timeline: scroll() !important;
   animation-range: 0vh 90vh;
 
   @include shrink-header(46px);
