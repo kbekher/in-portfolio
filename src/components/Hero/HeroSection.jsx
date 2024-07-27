@@ -8,7 +8,7 @@ const HeroSection = ({ type }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="HeroSection">
+    <div className="HeroSection" id={type === 'hero' ? 'about' : ''}>
       <div className="HeroSection__content">
 
         <div className="HeroSection__textContent">

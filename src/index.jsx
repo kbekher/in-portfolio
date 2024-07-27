@@ -5,10 +5,14 @@ import reportWebVitals from './reportWebVitals';
 
 import "./i18n.ts";
 
+import { LayerProvider } from './LayerContext.jsx';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <LayerProvider>
+      <App />
+    </LayerProvider>
   </React.StrictMode>
 );
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { NAV_LINKS } from '../../constants';
+import { NAV_LINKS } from '../../constants/constants';
+import { Link } from 'react-scroll';
 
 import './Navigation.scss';
 
@@ -11,7 +12,15 @@ const Navigation = () => {
     <ul className='Navigation'>
       {NAV_LINKS.map(link => (
         <li className='Navigation__item' key={link}>
-          <a href={`#${link}`} className="Navigation__btn">{t(link)}</a>
+          <Link
+            className="Navigation__btn"
+            to={link}
+            smooth={true}
+            delay={0}
+            duration={300}
+          >
+            {t(link)}
+          </Link>
         </li>
       ))}
     </ul>

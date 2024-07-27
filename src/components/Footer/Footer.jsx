@@ -12,7 +12,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='Footer'>
+    <div className='Footer' id="connect">
       <div className="container">
         <div className="Footer__content">
 
@@ -28,8 +28,6 @@ const Footer = () => {
 
             <ContactLinks />
           </div>
-
-
 
         </div>
       </div>

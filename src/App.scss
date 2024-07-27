@@ -8,15 +8,26 @@ html {
 
 body {
   overflow-x: hidden;
-  padding-top: env(safe-area-inset-top); /* This ensures the content starts below the status bar */
+  padding-top: env(safe-area-inset-top);
   min-height: 100vh;
-  /* mobile viewport bug fix */
+  /* This ensures the content starts below the status bar */
   min-height: -webkit-fill-available;
+  /* mobile viewport bug fix */
+}
+
+main {
+  padding-top: 100vh;
 }
 
 img {
   -webkit-user-drag: none;
 }
+
+.body--with-menu {
+  position: relative;
+  overflow: hidden; //TODO: fix content jump
+}
+
 
 .container {
   margin: 0 auto;
@@ -28,7 +39,7 @@ img {
     padding: 0 80px;
   }
 
-  @include onDesktop {
+  @include onLargeScreen {
     padding: 0 120px;
   }
 }
@@ -37,4 +48,60 @@ img {
   font-family: 'NeueMontreal', sans-serif;
   font-weight: 400;
   color: $color-white;
+
+  // These applied whe user scrolled down
+  &.has-scroll {
+    .Header {
+
+      &__visualContent {
+        height: auto;
+      }
+
+      &__textContent {
+        padding: 0;
+
+        @include onDesktop {
+          padding: 0 50px;
+          align-items: baseline;
+        }
+      }
+
+      .Logo {
+        padding: 4px 24px;
+        height: 38px;
+
+        @include onDesktop {
+          transform: translateY(10px);
+          padding: 0;
+          height: 46px;
+        }
+      }
+
+      &__title {
+        opacity: 0;
+      }
+
+      .Navigation,
+      .Controls__connect-btn {
+        margin: 0;
+      }
+
+      .Controls__connect-btn {
+        transform: translateY(-4px);
+      }
+
+      .Navigation__btn {
+        background-color: transparent;
+        color: rgba(255, 255, 255, .6);
+
+        &:hover {
+          color: $color-white;
+        }
+      }
+
+      .LanguageToggle {
+        opacity: 0;
+      }
+    }
+  }
 }

@@ -2,7 +2,8 @@
 
 .Logo {
   display: block;
-
+  transition: $transition;
+  
   &__image {
     @extend %img-size;
     width: 100%;

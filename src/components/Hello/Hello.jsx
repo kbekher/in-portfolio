@@ -1,15 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next';
 import 'animate.css';
 
 import './Hello.scss';
+import { LayerContext } from '../../LayerContext';
 
-const Hello = ({ isLayerOpen, setIsLayerOpen }) => {
+const Hello = () => {
   const { t } = useTranslation();
-
-  const closeLayer = () => {
-    setIsLayerOpen(false);
-  }
+  const { isLayerOpen, setIsLayerOpen } = useContext(LayerContext);
 
   if (!isLayerOpen) {
     return null;
@@ -19,7 +17,7 @@ const Hello = ({ isLayerOpen, setIsLayerOpen }) => {
     <div className={`Hello animate__animated ${isLayerOpen ? "animate__fadeIn" : ""}`}>
       <div className="container">
         <div className="Hello__content">
-          <button type="button" className="Hello__closeBtn" onClick={closeLayer}>
+          <button type="button" className="Hello__closeBtn" onClick={() => {setIsLayerOpen(false)}}>
             <svg width="38" height="38" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20.3369 20.5576L40.299 38.7377" stroke="#FFFFFE" strokeLinecap="round" />
               <path d="M21.2305 39.6254L39.4106 19.6633" stroke="#FFFFFE" strokeLinecap="round" />

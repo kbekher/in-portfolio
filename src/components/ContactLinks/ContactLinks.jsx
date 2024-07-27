@@ -1,5 +1,5 @@
 import React from 'react';
-import { MEDIA_LINKS } from '../../constants/index';
+import { MEDIA_LINKS } from '../../constants/constants';
 
 import './ContactLinks.scss';
 

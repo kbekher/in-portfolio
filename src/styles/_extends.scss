@@ -115,7 +115,6 @@
 
 %button-nav {
   @extend %button;
-
   background-color: $color-black-opacity;
 
   font-size: 14px;
@@ -124,6 +123,27 @@
   padding: 14px 10px;
   width: 102px;
   height: 46px; //TODO: should move to button? 
+
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-black-opacity; /* Slight white tint */
+    backdrop-filter: blur(10px); /* Adjust blur intensity */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    z-index: -1; /* Place the blur behind the text */
+    border-radius: $border-radius-btn;
+
+    @include onDesktop {
+      content: none;
+    }
+  }
 
   &:hover,
   &:active {
@@ -134,6 +154,10 @@
     width: 110px;
     padding: 11px 13px;
     height: 39px;
+
+    // &::before {
+    //   content: none;
+    // }
   }
 
   @include onLargeScreen {
@@ -157,8 +181,7 @@
   &:hover,
   &:active {
     background-color: $color-white;
-
-    //TODO: make transition smooth
+    
     & span {
       @extend %gradient-text;
     }

@@ -1,59 +1,52 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Spline from '@splinetool/react-spline';
 import { useTranslation } from "react-i18next";
+import { animateScroll as scroll } from 'react-scroll';
+
+import useIsMobile from '../../hooks/useIsMobile';
 
 import { Logo } from '../Logo/Logo';
-import Navigation from '../Navigation/Navigation';
-import LanguageToggle from '../LanguageToggle/LanguageToggle';
-import Hello from '../Hello/Hello';
+import Controls from '../Controls/Controls';
 
 import './Header.scss';
-import useIsMobile from '../../hooks/useIsMobile';
 
 const Header = () => {
   const { t } = useTranslation();
-
-  const [isLayerOpen, setIsLayerOpen] = useState(false);
-  
-  const toggleLayer = () => { setIsLayerOpen(true); }
 
   const isMobile = useIsMobile();
 
   const splineCode = isMobile ? 'z8TxyhHvqedYy4lw' : 'liDjqaY-i3BfRC2o';
 
+  const handleHeaderClick = () => {
+    if (window.scrollY === 0 || !isMobile) return;
+
+    scroll.scrollToTop({ duration: '250ms' });
+  }
+
+  const handleLogoClick = () => {
+    if (window.scrollY === 0 || isMobile) return;
+
+    scroll.scrollToTop({ duration: '250ms' });
+  }
+
   return (
-    <header className="Header">
-      
+    <header className="Header" onClick={handleHeaderClick}>
+
       <div className="Header__visualContent">
         <Spline scene={`https://prod.spline.design/${splineCode}/scene.splinecode`} />
       </div>
 
-      <Hello isLayerOpen={isLayerOpen} setIsLayerOpen={setIsLayerOpen} />
-
       <div className="Header__textContent">
-        <div className="container">
-          <div className="Header__textContent-inner">
 
-            <div className="Header__top">
-              <Logo />
-              <h1 className='Header__title'>{t("title")}</h1>
-            </div>
-
-            <div className="Header__controls">
-              <div className="Header__nav">
-                <Navigation />
-              </div>
-
-              <div className="Header__actions">
-                <button type="button" className="Header__connect-btn" onClick={toggleLayer}>
-                  {t("contact")}
-                </button>
-
-                <LanguageToggle />
-              </div>
-            </div>
-
+        <div className="Header__top">
+          <div className="Header__logo" onClick={handleLogoClick}>
+            <Logo />
           </div>
+          <h1 className='Header__title'>{t("title")}</h1>
+        </div>
+
+        <div className="Header__controls">
+          <Controls />
         </div>
       </div>
 

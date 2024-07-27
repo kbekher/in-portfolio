@@ -6,7 +6,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 100;
   overflow: hidden;
 
   &.animate__fadeIn,
@@ -17,7 +17,7 @@
   &__content {
     height: 100%;
     box-sizing: border-box;
-    padding-top: 64px;
+    padding-top: 42px;
     display: flex;
     flex-direction: column;
 

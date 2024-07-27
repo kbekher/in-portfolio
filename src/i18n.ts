@@ -30,7 +30,7 @@ i18n.use(initReactI18next).init({
         biographyTitle: "About me",
         biographyText1: "Hi there! I'm Ivan, a UX/UI designer, graphic designer, and illustrator. I create unique, user-friendly interfaces that make brands and products stand out.",
         biographyText2: "Starting as a graphic designer, I crafted logos and corporate identities. Now, I focus on intuitive UX/UI designs and express my creativity through illustration.",
-        biographyText3: "My goal is to inspire my clients and users with every design I create",
+        biographyText3: "My goal is to inspire my clients and users with every design.",
         footerPrompt: "Stay informed, subscribe",
         footerDetails: "Receive our latest updates and exclusive offers.",
         footerButton: "Join",

@@ -1,54 +1,58 @@
 @import '../../styles/utils';
 
+
 .Header {
   @extend %component-height;
-  position: relative;
+  width: 100vw;
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+
+  animation: sticky-parallax-header-move-and-size linear forwards;
+  animation-timeline: scroll();
+  animation-range: 0vh 90vh;
+
+  @include shrink-header(46px);
+
+  @include onDesktop {
+    @include shrink-header(74px);
+  }
 
   &__visualContent,
   &__textContent {
     height: 100%;
   }
 
-  &__textContent {
+  &__visualContent {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
-
-    &-inner {
-      height: 100%;
-      box-sizing: border-box;
-      padding: 60px 0 36px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      @include onDesktop {
-        flex-direction: row;
-        padding: 40px 0 70px;
-      }
-
-      @include onLargeScreen {
-        padding: 80px 0 94px;
-      }
-    }
+    z-index: -1;
   }
 
-  &__actions {
+  &__textContent {
+    transition: $transition;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 60px 20px 36px;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
+    flex-direction: column;
+    justify-content: space-between;
 
     @include onDesktop {
-      height: 100%;
+      flex-direction: row;
+      padding: 40px 80px 70px;
+    }
+
+    @include onLargeScreen {
+      padding: 80px 120px 94px;
     }
   }
 
-  &__top,
-  &__actions {
+  &__top {
     @include onDesktop {
       display: flex;
       flex-direction: column;
@@ -56,19 +60,9 @@
     }
   }
 
-  &__nav {
-    margin: 0 0 20px;
-
-    @include onDesktop {
-      margin: 8px 0 0;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-
   &__title {
-    @extend %headline-h1 ;
+    @extend %headline-h1;
+    transition: $transition;
     max-width: 440px;
 
     @include onDesktop {
@@ -80,37 +74,26 @@
     }
   }
 
-  & .Logo {
+  &__logo {
     margin-bottom: 10px;
     width: 50px;
     height: 53px;
-  
+
+    @include onDesktop {
+      cursor: pointer;
+    }
+
     @include onLargeScreen {
       margin-bottom: 0;
       height: 64px;
     }
   }
 
-  &__connect-btn {
-    @extend %button-nav;
-
-    @include onDesktop {
-      margin-top: 8px;
-    }
-  }
-
   &__controls {
-    position: fixed;
-    bottom: 36px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+    display: none;
 
     @include onDesktop {
       display: block;
-      position: static;
-      transform: none;
-      width: max-content;
     }
   }
 }
